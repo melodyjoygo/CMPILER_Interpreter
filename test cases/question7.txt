@@ -1,4 +1,5 @@
 main(){
+<<<<<<< HEAD
     int size;
     scan("Enter table size: ", size);
     String result;
@@ -26,5 +27,35 @@ main(){
         }
     j = 0;
         print(result);
+=======
+    int tableSize;
+    scan("Enter table size: ", tableSize);
+    String row;
+    int y = 0;
+    int x = 0;
+    int z;
+    for y up to tableSize + 1{
+        for x up to tableSize{
+
+            if(x == 0){
+                if(y==0){
+                   row = "     ";
+                }
+                else{
+                    row = y + "     ";
+                }
+            }
+            if(y==0){
+        z = x+1;
+                row = row + z + "     ";
+            }
+            else{
+        z = (x+1)*y;
+                row = row + z + "     ";
+            }
+        }
+    x = 0;
+        print(row);
+>>>>>>> parent of 39f9eef... Revert "test cases"
     }
   }
