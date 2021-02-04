@@ -3,13 +3,10 @@ package model;
 import java.util.ArrayList;
 
 public class SemanticErrorManager {
-    //Singleton class for tracking all Semantic Errors
     private static SemanticErrorManager sharedInstance = null;
     private static ArrayList<String> semanticErrors = new ArrayList<>();
     private static boolean errorFlag = false;
 
-
-    //Implementation of singleton
     public static SemanticErrorManager getInstance(){
         if(sharedInstance == null){
             sharedInstance = new SemanticErrorManager();

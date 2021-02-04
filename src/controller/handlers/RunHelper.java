@@ -52,31 +52,12 @@ public class RunHelper {
         OutputManager.getInstance().resetOutputManager();
         OutputManager.getInstance().setConsole(console);
 
-        // if((input.indexOf("x = 2")!=-1) && (input.indexOf("y = 2")!=-1) && (input.indexOf("z = 2")!=-1) ){
-        //     OutputManager.getInstance().addoutputLog("Value is: 32.0");
-        //     //System.out.println("32!");
-        // }
-        // else if((input.indexOf("x = -1")!=-1) && (input.indexOf("y = -2")!=-1) && (input.indexOf("z = -3")!=-1)){
-        //     OutputManager.getInstance().addoutputLog("Value is: -24.0");
-        //     //System.out.println("32!");
-        // }
-        // else if((input.indexOf("x = 1")!=-1) && (input.indexOf("y = 1")!=-1) && (input.indexOf("z = x+1")!=-1)){
-        //     OutputManager.getInstance().addoutputLog("Value is: 40.0");
-        //     //System.out.println("32!");
-        // }
-        // else if((input.indexOf("x = 0")!=-1) && (input.indexOf("y = 0")!=-1) && (input.indexOf("z = 0")!=-1)){
-        //     OutputManager.getInstance().addoutputLog("Value is: 44.0");
-        //     //System.out.println("32!");
-        // }
-            
-
         CParser parser = getParser(input);
 
         ParserRuleContext parserRuleContext = parser.compilationUnit();
 
 
         if(this.syntaxErrorListener.syntaxErrFlag) {
-            //If there are syntax model.checkers, add model.checkers to the log
             for(int i = 0; i < syntaxErrorListener.getSyntaxErrors().size(); i++){
                 Text error = new Text(syntaxErrorListener.getSyntaxErrors().get(i).replaceAll("_LINEBREAK_", "\n"));
                 error.setFill(Color.RED);
@@ -84,14 +65,10 @@ public class RunHelper {
             }
         }
         else{
-            //Check for semantic model.checkers and fill up SymbolTable, CommandTable
             CBaseVisitor unoVisitor = new CBaseVisitor<Void>();
             unoVisitor.visit(parserRuleContext);
 
-            //Add Symbol Tokens to the debugger
 
-
-            //If semantic model.checkers exist add model.checkers to logs
             if(SemanticErrorManager.getInstance().isErrorFlag()){
                 for(String semanticError : SemanticErrorManager.getInstance().getSemanticErrors()){
                     Text error = new Text(semanticError.replaceAll("_LINEBREAK_", "\n"));
@@ -99,12 +76,10 @@ public class RunHelper {
                     console.getChildren().add(error);
                 }
             }
-            //Else execute all model.commands.commands in the command stack
             else{
                 Method mainFunction = SymbolTableManager.getInstance().findFunction("main");
                 SymbolTableManager.getInstance().setCurrentFunction(mainFunction);
                 SymbolTableManager.getInstance().setCurrentScope(mainFunction.getFunctionScope());
-                // Add all model.commands.commands of the main function to the execution manager
                 for(int i = 0; i < mainFunction.getCommandList().size(); i++ ){
                     ExecutionManager.getInstance().addExecutionList(mainFunction.getCommandList().get(i));
                 }
@@ -117,16 +92,14 @@ public class RunHelper {
     }
 
     public void parseTree(){
-        // Get generated parse tree
         String input = codeArea.getText();
         CParser parser = getParser(input);
         ParseTree antlrAST = parser.compilationUnit();
 
-        //show AST in GUI
         JFrame frame = new JFrame("Parse Tree");
         JPanel panel = new JPanel();
         TreeViewer viewer = new TreeViewer(Arrays.asList(parser.getRuleNames()),antlrAST);
-        viewer.setScale(1.5); // Scale a little
+        viewer.setScale(1.5); 
         panel.add(viewer);
         frame.add(panel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -141,7 +114,6 @@ public class RunHelper {
         CLexer lexer = new CLexer(charStream);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         CParser parser = new CParser(tokens);
-        // Syntax Error Handling
         parser.removeErrorListeners();
         this.syntaxErrorListener = new SyntaxErrorListener();
         parser.addErrorListener(this.syntaxErrorListener);

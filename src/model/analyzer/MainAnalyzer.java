@@ -18,14 +18,13 @@ public class MainAnalyzer implements ParseTreeListener {
     private Method function;
 
     public MainAnalyzer() {
-
+        //initialize
     }
 
     public void analyze(CParser.MainDeclarationContext ctx) {
         if(!ExecutionManager.getInstance().hasFoundEntryPoint()) {
             ExecutionManager.getInstance().reportEntryPoint();
 
-            //Create a main function
             function = new Method("main", null, PrimitiveType.VOID);
             SymbolTableManager.getInstance().addFunction("main", function);
             SymbolTableManager.getInstance().setCurrentFunction(function);
@@ -35,18 +34,18 @@ public class MainAnalyzer implements ParseTreeListener {
             treeWalker.walk(this, ctx);
         }
         else {
-            System.err.println("Duplicate Main ");
+            //
         }
     }
 
     @Override
     public void visitTerminal(TerminalNode terminalNode) {
-
+        //
     }
 
     @Override
     public void visitErrorNode(ErrorNode errorNode) {
-
+        //
     }
 
     @Override
@@ -60,6 +59,6 @@ public class MainAnalyzer implements ParseTreeListener {
 
     @Override
     public void exitEveryRule(ParserRuleContext parserRuleContext) {
-
+        //
     }
 }

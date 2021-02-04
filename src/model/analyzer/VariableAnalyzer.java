@@ -13,8 +13,6 @@ import model.representations.PrimitiveType;
 import model.representations.Value;
 
 
-// Handles all variable declarations, variable initialization, variable re assignment
-
 public class VariableAnalyzer implements ParseTreeListener {
     String id;
     PrimitiveType primitiveType = PrimitiveType.fromString("ewan");
@@ -27,9 +25,7 @@ public class VariableAnalyzer implements ParseTreeListener {
         this.withAssignment = false;
     }
 
-
     public void analyze(CParser.LocalVariableDeclarationContext localVarDecCtx) {
-        //Walk the parse tree to get necessary values(id, type, expression?)
         ParseTreeWalker treeWalker = new ParseTreeWalker();
         treeWalker.walk(this, localVarDecCtx);
 
@@ -41,24 +37,19 @@ public class VariableAnalyzer implements ParseTreeListener {
         }
         else{
             this.value = new Value(null, primitiveType);
-            System.out.println("Created variable " + this.id + " in function " + SymbolTableManager.getInstance().getCurrentScope().getId());
             SymbolTableManager.getInstance().getCurrentScope().addVariable(id,value);
         }
 
         if(withAssignment){
-            System.out.println("Found assignment command in variable declaration. Adding new assignment command in function " + SymbolTableManager.getInstance().getCurrentFunction().getFunctionName());
             AssignmentCommand assignmentCommand = new AssignmentCommand(id, variableExpression);
             SymbolTableManager.getInstance().getCurrentFunction().addCommand(assignmentCommand);
         }
     }
 
-    // For analyzing variables inside a parameter
     public void analyzeParameter(CParser.FormalParameterContext formalParameterContext){
-        //
         ParseTreeWalker treeWalker = new ParseTreeWalker();
         treeWalker.walk(this, formalParameterContext);
         this.value = new Value(expression, primitiveType);
-//        SymbolTableManager.getInstance().getCurrentFunction().getFunctionScope().addVariable(id, value);
     }
 
     public String getId() {
@@ -71,19 +62,18 @@ public class VariableAnalyzer implements ParseTreeListener {
 
     @Override
     public void visitTerminal(TerminalNode terminalNode) {
-
+        //
     }
 
     @Override
     public void visitErrorNode(ErrorNode errorNode) {
-
+        //
     }
 
     @Override
     public void enterEveryRule(ParserRuleContext parserRuleContext) {
 
-        //Primitive Types
-        if(parserRuleContext instanceof CParser.IntegralTypeContext) { // char, byte, int
+        if(parserRuleContext instanceof CParser.IntegralTypeContext) { 
             this.primitiveType = PrimitiveType.fromString(parserRuleContext.getText());
         }
         if(parserRuleContext instanceof CParser.FloatingPointTypeContext) {
@@ -95,34 +85,24 @@ public class VariableAnalyzer implements ParseTreeListener {
             }
         }
         if(parserRuleContext instanceof CParser.UnannClassType_lfno_unannClassOrInterfaceTypeContext){
-            //not sure but in order to make sure you can check one level below to check if identifier
             if(parserRuleContext.getChildCount() == 1){
                 this.primitiveType = PrimitiveType.STRING;
             }
         }
 
-        // Get variable name
         if(parserRuleContext instanceof CParser.VariableDeclaratorIdContext) {
             this.id = parserRuleContext.getText();
         }
-//        if(parserRuleContext instanceof CParser.IdentifierContext) {
-//            this.id = parserRuleContext.getText();
-//        }
 
-        // Get variable value
         if(parserRuleContext instanceof CParser.VariableInitializerContext) {
             withAssignment = true;
             this.variableExpression = ((CParser.VariableInitializerContext) parserRuleContext).expression();
-//            System.err.println("Variable model.analyzer.analyzer = " +id+" "+ ((CParser.VariableInitializerContext) parserRuleContext).expression().getText());
             this.expression = parserRuleContext.getText();
         }
-//        if(parserRuleContext instanceof CParser.ExpressionContext) {
-//            this.expression = parserRuleContext.getText();
-//        }
     }
 
     @Override
     public void exitEveryRule(ParserRuleContext parserRuleContext) {
-
+        //
     }
 }

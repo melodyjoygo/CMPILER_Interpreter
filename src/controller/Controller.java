@@ -20,7 +20,7 @@ public class Controller implements Initializable {
     private RunHelper runHelper;
 
     public Controller() {
-//        runHelper = new RunHelper(codeArea, console);
+        //initialize
     }
 
     @FXML
