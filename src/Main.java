@@ -34,7 +34,11 @@ public class Main extends Application {
 
 //    Setup GUI of the IDE
     private void setupComponents(){
+<<<<<<< HEAD
 
+=======
+        /* comment */
+>>>>>>> parent of c71d38e... last push
     }
 
 // Start of code for editor keyword highlighting

@@ -30,16 +30,27 @@ public class IfCommand implements IConditionalCommand {
             bool = true;
         }
 
+<<<<<<< HEAD
         System.out.println("Executing Commands inside of if - " + bool);
 
         if(bool){
             System.out.println("positive");
+=======
+        //System.out.println("Executing Commands inside of if - " + bool);
+
+        if(bool){
+            //System.out.println("positive");
+>>>>>>> parent of c71d38e... last push
             for (ICommand command: positiveCommands) {
                 command.execute();
             }
         }
         else{
+<<<<<<< HEAD
             System.out.println("negative");
+=======
+            //System.out.println("negative");
+>>>>>>> parent of c71d38e... last push
             for (ICommand command: negativeCommands) {
                 command.execute();
             }

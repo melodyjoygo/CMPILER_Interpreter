@@ -31,7 +31,11 @@ public class CommandControlManager {
         return sharedInstance;
     }
 
+<<<<<<< HEAD
     public void resetConditionalManager(){ //Call this when leaving a controlled command
+=======
+    public static void resetConditionalManager(){ //Call this when leaving a controlled command
+>>>>>>> parent of c71d38e... last push
         sharedInstance = null;
     }
 
@@ -84,7 +88,11 @@ public class CommandControlManager {
     }
 
     public void exitedCommand(){
+<<<<<<< HEAD
         System.out.println("Exited controlled command: " + this.controlType);
+=======
+        //System.out.println("Exited controlled command: " + this.controlType);
+>>>>>>> parent of c71d38e... last push
         if(commandList.isEmpty()){
             this.resetConditionalManager();
         }

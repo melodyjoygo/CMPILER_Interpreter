@@ -129,6 +129,11 @@ public class EvaluateCommand implements ICommand, ParseTreeListener {
             this.isFunction = true;
             System.out.println("Evaluate function");
             this.modifiedExpression = (String) new FunctionCallCommand((CParser.MethodInvocation_lfno_primaryContext)parserRuleContext).evaluateFunctionCall().getValue();
+<<<<<<< HEAD
+=======
+            //String temp = (String) new FunctionCallCommand((UnoPlsParser.MethodInvocation_lfno_primaryContext)parserRuleContext).evaluateFunctionCall().getValue();
+            this.modifiedExpression.replace(parserRuleContext.getText(), temp);
+>>>>>>> parent of c71d38e... last push
         }
 
         //If the evaluator encounters an identifier context
