@@ -20,8 +20,6 @@ public class Main extends Application {
         controller = loader.getController();
         Scene scene = new Scene(root);
 
-        setupComponents();
-
         primaryStage.setTitle("CMPILER MO Interpreter - IDE");
         primaryStage.setScene(scene);
         primaryStage.show();
@@ -32,6 +30,7 @@ public class Main extends Application {
         launch(args);
     }
 
+<<<<<<< HEAD
 //    Setup GUI of the IDE
     private void setupComponents(){
 <<<<<<< HEAD
@@ -46,5 +45,7 @@ public class Main extends Application {
     }
 
 // Start of code for editor keyword highlighting
+=======
+>>>>>>> parent of f929ae2... Revert "Merge branch 'main' into melody"
 
 }

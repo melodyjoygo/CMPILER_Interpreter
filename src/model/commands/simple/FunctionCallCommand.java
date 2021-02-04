@@ -32,12 +32,9 @@ public class FunctionCallCommand implements ICommand, ParseTreeListener {
         this.methodInvocationContext = methodInvocationContext;
         this.functionName = methodInvocationContext.methodName().identifier().getText();
 
-        // get function template, the function template does not need to be cloned because all we want is the ICommand List,
-        //                        The parameters are reset every function call
         method = SymbolTableManager.getInstance().findFunction(functionName);
         this.functionName = method.getFunctionName();
 
-        //walk the function call to get parameters
         parameterValue = new ArrayList<>();
 
     }
@@ -47,25 +44,20 @@ public class FunctionCallCommand implements ICommand, ParseTreeListener {
         this.methodInvocation_lfno_primaryContext = methodInvocationContext;
         this.functionName = methodInvocationContext.methodName().identifier().getText();
 
-        // get function template, the function template does not need to be cloned because all we want is the ICommand List,
-        //                        The parameters are reset every function call
         method = SymbolTableManager.getInstance().findFunction(functionName);
         this.functionName = method.getFunctionName();
-        System.out.println("Function call in variable assignment in " + SymbolTableManager.getInstance().getCurrentFunction().getFunctionName());
 
         parameterValue = new ArrayList<>();
 
     }
 
     public Value evaluateFunctionCall(){
-//        System.out.println("Executing function call in an expression in function " + parentFunction.getFunctionName());
         this.execute();
         return this.method.getReturnValue();
     }
 
     @Override
     public void execute() {
-        System.out.println("Executing function call: " + functionName + "" );
         parentFunction = SymbolTableManager.getInstance().getCurrentFunction();
         // set the paremeters of the function
         //walk the function call to get parameters
@@ -87,17 +79,17 @@ public class FunctionCallCommand implements ICommand, ParseTreeListener {
     }
 
     public void getReturn(){
-
+        //comment
     }
 
     @Override
     public void visitTerminal(TerminalNode terminalNode) {
-
+        //comment
     }
 
     @Override
     public void visitErrorNode(ErrorNode errorNode) {
-
+        //comment
     }
 
     @Override
@@ -115,6 +107,6 @@ public class FunctionCallCommand implements ICommand, ParseTreeListener {
 
     @Override
     public void exitEveryRule(ParserRuleContext parserRuleContext) {
-
+        //comment
     }
 }

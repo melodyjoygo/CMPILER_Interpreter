@@ -2,11 +2,12 @@ package model.commands.controlled;
 
 import antlr.CParser;
 import model.commands.ICommand;
+import model.CommandControlManager;
 import model.commands.EvaluateCommand;
 
 import java.util.*;
 
-public class IfCommand implements IConditionalCommand {
+public class IfCommand implements IConditionalCommand, IControlledCommand {
 
     private ArrayList<ICommand> positiveCommands; //list of model.commands.commands to execute if the condition holds true
     private ArrayList<ICommand> negativeCommands; //list of model.commands.commands to execute if the condition holds false
@@ -32,6 +33,7 @@ public class IfCommand implements IConditionalCommand {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         System.out.println("Executing Commands inside of if - " + bool);
 
         if(bool){
@@ -47,11 +49,15 @@ public class IfCommand implements IConditionalCommand {
 >>>>>>> parent of c71d38e... last push
 =======
 >>>>>>> parent of c71d38e... last push
+=======
+        if(bool){
+>>>>>>> parent of f929ae2... Revert "Merge branch 'main' into melody"
             for (ICommand command: positiveCommands) {
                 command.execute();
             }
         }
         else{
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             System.out.println("negative");
@@ -61,6 +67,8 @@ public class IfCommand implements IConditionalCommand {
 =======
             //System.out.println("negative");
 >>>>>>> parent of c71d38e... last push
+=======
+>>>>>>> parent of f929ae2... Revert "Merge branch 'main' into melody"
             for (ICommand command: negativeCommands) {
                 command.execute();
             }
@@ -70,6 +78,16 @@ public class IfCommand implements IConditionalCommand {
     @Override
     public IControlledCommand.ControlTypeEnum getControlType() {
         return IControlledCommand.ControlTypeEnum.CONDITIONAL_IF;
+    }
+
+    @Override
+    public void addCommand(ICommand command){
+        if(CommandControlManager.getInstance().getIsInPositive()){
+            this.addPositiveCommand(command);
+        }
+        else{
+            this.addNegativeCommand(command);
+        }
     }
 
     @Override
