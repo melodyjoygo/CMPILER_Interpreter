@@ -8,6 +8,7 @@ import antlr.CBaseVisitor;
 import antlr.CLexer;
 import antlr.CParser;
 import model.checkers.SyntaxErrorListener;
+import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
@@ -51,53 +52,35 @@ public class RunHelper {
         OutputManager.getInstance().setConsole(console);
         OutputManager.getInstance().resetOutputManager();
         OutputManager.getInstance().setConsole(console);
-
-        // if((input.indexOf("x = 2")!=-1) && (input.indexOf("y = 2")!=-1) && (input.indexOf("z = 2")!=-1) ){
-        //     OutputManager.getInstance().addoutputLog("Value is: 32.0");
-        //     //System.out.println("32!");
-        // }
-        // else if((input.indexOf("x = -1")!=-1) && (input.indexOf("y = -2")!=-1) && (input.indexOf("z = -3")!=-1)){
-        //     OutputManager.getInstance().addoutputLog("Value is: -24.0");
-        //     //System.out.println("32!");
-        // }
-        // else if((input.indexOf("x = 1")!=-1) && (input.indexOf("y = 1")!=-1) && (input.indexOf("z = x+1")!=-1)){
-        //     OutputManager.getInstance().addoutputLog("Value is: 40.0");
-        //     //System.out.println("32!");
-        // }
-        // else if((input.indexOf("x = 0")!=-1) && (input.indexOf("y = 0")!=-1) && (input.indexOf("z = 0")!=-1)){
-        //     OutputManager.getInstance().addoutputLog("Value is: 44.0");
-        //     //System.out.println("32!");
-        // }
             
-
         CParser parser = getParser(input);
 
         ParserRuleContext parserRuleContext = parser.compilationUnit();
 
 
-        if(this.syntaxErrorListener.syntaxErrFlag) {
+        // if(this.syntaxErrorListener.syntaxErrFlag) {
             //If there are syntax model.checkers, add model.checkers to the log
+            Label error = new Label();
+            String errorBuilder = "";
             for(int i = 0; i < syntaxErrorListener.getSyntaxErrors().size(); i++){
-                Text error = new Text(syntaxErrorListener.getSyntaxErrors().get(i).replaceAll("_LINEBREAK_", "\n"));
-                error.setFill(Color.RED);
-                console.getChildren().add(error);
+                errorBuilder = errorBuilder + syntaxErrorListener.getSyntaxErrors().get(i) + "\n";
             }
-        }
-        else{
+            error.setText(errorBuilder);
+            console.getChildren().add(error);
+        // }
+        // else{
             //Check for semantic model.checkers and fill up SymbolTable, CommandTable
             CBaseVisitor unoVisitor = new CBaseVisitor<Void>();
             unoVisitor.visit(parserRuleContext);
-
-            //Add Symbol Tokens to the debugger
-
-
             //If semantic model.checkers exist add model.checkers to logs
             if(SemanticErrorManager.getInstance().isErrorFlag()){
+                Label error2 = new Label();
+                String errorBuilder2 = "";
                 for(String semanticError : SemanticErrorManager.getInstance().getSemanticErrors()){
-                    Text error = new Text(semanticError.replaceAll("_LINEBREAK_", "\n"));
-                    error.setFill(Color.DARKRED);
-                    console.getChildren().add(error);
+                    errorBuilder2 = errorBuilder2 + semanticError + "\n";
                 }
+                error2.setText(errorBuilder2);
+                console.getChildren().add(error2);
             }
             //Else execute all model.commands.commands in the command stack
             else{
@@ -113,8 +96,8 @@ public class RunHelper {
             }
         }
 
-        return;
-    }
+        //return;
+    //}
 
     public void parseTree(){
         // Get generated parse tree
@@ -126,7 +109,7 @@ public class RunHelper {
         JFrame frame = new JFrame("Parse Tree");
         JPanel panel = new JPanel();
         TreeViewer viewer = new TreeViewer(Arrays.asList(parser.getRuleNames()),antlrAST);
-        viewer.setScale(1.5); // Scale a little
+        viewer.setScale(1.5); 
         panel.add(viewer);
         frame.add(panel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
