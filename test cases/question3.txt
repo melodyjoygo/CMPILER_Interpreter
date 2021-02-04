@@ -1,0 +1,11 @@
+main(){
+    String first;
+    String mid;
+    String last;
+
+    scan("First Name", first);
+    scan("Middle Name", mid);
+    scan("Last Name", last);
+
+    print("Welcome " + first + " " + mid+ " " + last+ "!");
+}
