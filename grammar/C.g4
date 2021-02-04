@@ -62,7 +62,7 @@ Total lexer+parser time 3634ms.
 Total lexer+parser time 2497ms.
  */
 
-grammar UnoPls;
+grammar C;
 
 /*
  * Productions from �3 (Lexical Structure)
