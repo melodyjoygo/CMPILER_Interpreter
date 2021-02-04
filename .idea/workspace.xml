@@ -1,125 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Initialized files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/C.interp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/C.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/CBaseListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/CBaseVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/CLexer.interp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/CLexer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/CLexer.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/CListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/CParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/grammar/CVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/Managers/commandControl/CommandControlManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/Managers/errors/SemanticErrorManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/Managers/execution/ExecutionManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/Managers/io/OutputManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/Managers/symbols/Scope.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/Managers/symbols/SymbolTableManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/analyzer/BlockAnalyzer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/analyzer/FunctionDeclarationAnalyzer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/analyzer/MainAnalyzer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/analyzer/StatementAnalyzer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/analyzer/VariableAnalyzer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/antlr/CBaseVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CInterpreter/antlr/CBaseVisitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/antlr/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/EvaluateCommand$1$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/EvaluateCommand$1$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/EvaluateCommand$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/EvaluateCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/ICommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/controlled/DoWhileCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/controlled/ForCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/controlled/ForUpToCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/controlled/IConditionalCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/controlled/IControlledCommand$ControlTypeEnum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/controlled/IControlledCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/controlled/IfCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/controlled/WhileCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/evaluation/ArrayInitializeCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/evaluation/AssignmentCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/evaluation/MappingCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/simple/FunctionCallCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/simple/IncDecCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/simple/PrintCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/simple/ReturnCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/commands/simple/ScanCommand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/errors/SyntaxErrorListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/errors/semantic/ClassNameChecker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/errors/semantic/ConstChecker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/errors/semantic/IErrorChecker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/errors/semantic/MultipleFuncDecChecker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/ide/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/ide/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/ide/codearea.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/ide/handlers/FileHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/ide/handlers/RunHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/ide/ide.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/ide/inputForm/InputDialog$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/ide/inputForm/InputDialog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/representations/CFunction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/representations/PrimitiveType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/representations/RecognizedKeywords.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/representations/Value$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CInterpreter/representations/Value.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Managers/commandControl/CommandControlManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CommandControlManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Managers/errors/SemanticErrorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SemanticErrorManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Managers/execution/ExecutionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ExecutionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Managers/io/OutputManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/OutputManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Managers/symbols/Scope.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Scope.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Managers/symbols/SymbolTableManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/SymbolTableManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/analyzer/BlockAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/analyzer/BlockAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/analyzer/FunctionDeclarationAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/analyzer/FunctionDeclarationAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/analyzer/MainAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/analyzer/MainAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/analyzer/StatementAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/analyzer/StatementAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/analyzer/VariableAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/analyzer/VariableAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/antlr/CBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/CBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/antlr/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/EvaluateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/EvaluateCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/ICommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/ICommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/controlled/DoWhileCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/controlled/ForCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/controlled/ForUpToCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/controlled/ForUpToCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/controlled/IConditionalCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/controlled/IConditionalCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/controlled/IControlledCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/controlled/IControlledCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/controlled/IfCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/controlled/IfCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/controlled/WhileCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/controlled/WhileCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/evaluation/ArrayInitializeCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/evaluation/AssignmentCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/evaluation/AssignmentCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/evaluation/MappingCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/simple/FunctionCallCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/simple/FunctionCallCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/simple/IncDecCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/simple/PrintCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/simple/PrintCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/simple/ReturnCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/simple/ReturnCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/commands/simple/ScanCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/commands/simple/ScanCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/errors/SyntaxErrorListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/checkers/SyntaxErrorListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/errors/semantic/ClassNameChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/checkers/ClassNameChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/errors/semantic/ConstChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/checkers/ConstChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/errors/semantic/IErrorChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/checkers/IErrorChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/errors/semantic/MultipleFuncDecChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/checkers/MultipleFuncDecChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ide/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ide/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ide/codearea.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ide/handlers/FileHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ide/handlers/RunHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/handlers/RunHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ide/ide.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ide.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ide/inputForm/InputDialog.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/inputForm/InputDialog.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ide/inputForm/InputDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/inputForm/InputDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/representations/CFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/representations/Method.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/representations/PrimitiveType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/representations/PrimitiveType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/representations/RecognizedKeywords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/representations/RecognizedKeywords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/representations/Value.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/representations/Value.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/interpreter/anagram.unopls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/interpreter/forUpTo.unopls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/interpreter/functions.unopls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/interpreter/ifelse.unopls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/interpreter/while.unopls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/parser/parser.unopls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/parser/test1.unopls" beforeDir="false" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Initialized files" />
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -179,10 +61,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/commands/simple/FunctionCallCommand.java">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+            <state relative-caret-position="272">
+              <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,102 +73,42 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/commands/simple/ReturnCommand.java">
+        <entry file="file://$PROJECT_DIR$/test cases/question3.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/commands/simple/ScanCommand.java">
+        <entry file="file://$PROJECT_DIR$/test cases/question4.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/handlers/RunHelper.java">
+        <entry file="file://$PROJECT_DIR$/test cases/question5.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
+            <state relative-caret-position="-5" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/inputForm/InputDialog.java">
+        <entry file="file://$PROJECT_DIR$/test cases/question7.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-180">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state>
+              <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/model/representations/PrimitiveType.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-              <folding>
-                <element signature="e#273#274#0" expanded="true" />
-                <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#339#340#0" expanded="true" />
-                <element signature="e#367#368#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/representations/RecognizedKeywords.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/representations/Method.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/representations/Value.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-639">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/commands/evaluation/AssignmentCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/test cases/question8.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -346,10 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Managers/symbols/SymbolTableManager.java" />
-        <option value="$PROJECT_DIR$/src/Managers/execution/ExecutionManager.java" />
-        <option value="$PROJECT_DIR$/src/antlr/UnoPlsBaseVisitor.java" />
-        <option value="$PROJECT_DIR$/src/antlr/Main.java" />
         <option value="$PROJECT_DIR$/src/analyzer/MainAnalyzer.java" />
         <option value="$PROJECT_DIR$/src/Managers/ConditionalManager.java" />
         <option value="$PROJECT_DIR$/src/Managers/conditional/ConditionalManager.java" />
@@ -397,6 +215,10 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/view/ide.fxml" />
         <option value="$PROJECT_DIR$/src/model/representations/PrimitiveType.java" />
+        <option value="$PROJECT_DIR$/test cases/question3.txt" />
+        <option value="$PROJECT_DIR$/test cases/question4.txt" />
+        <option value="$PROJECT_DIR$/test cases/question5.txt" />
+        <option value="$PROJECT_DIR$/test cases/question7.txt" />
       </list>
     </option>
   </component>
@@ -440,38 +262,7 @@
             <path>
               <item name="CMPILER_Interpreter" type="b2602c69:ProjectViewProjectNode" />
               <item name="CMPILER_Interpreter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CMPILER_Interpreter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMPILER_Interpreter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="antlr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CMPILER_Interpreter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMPILER_Interpreter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="antlrHelper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CMPILER_Interpreter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMPILER_Interpreter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CMPILER_Interpreter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMPILER_Interpreter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CMPILER_Interpreter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CMPILER_Interpreter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-              <item name="representations" type="462c0819:PsiDirectoryNode" />
+              <item name="test cases" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -727,7 +518,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32569557" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32569557" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.049099836" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -807,33 +598,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/antlr/CVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-start-column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/antlr/CParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-969">
-          <caret column="33" selection-start-column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/antlr/CListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-start-column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/antlr/CLexer.tokens">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/antlr/CLexer.interp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/antlr/CErrorListener.java" />
     <entry file="file://$PROJECT_DIR$/src/antlr/CError.java" />
     <entry file="file://$PROJECT_DIR$/src/antlr/CLexer.java">
@@ -903,16 +667,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/CParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="7" lean-forward="true" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/CParser.java" />
     <entry file="file://$PROJECT_DIR$/grammar/C.g4">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-86">
@@ -940,23 +695,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/hello.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/hello.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/hello.java" />
+    <entry file="file://$PROJECT_DIR$/src/controller/hello.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
+        <state relative-caret-position="272">
           <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -964,22 +707,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/C.tokens">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grammar/CVisitor.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/antlr/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/grammar/C.tokens" />
+    <entry file="file://$PROJECT_DIR$/grammar/CVisitor.java" />
+    <entry file="file://$PROJECT_DIR$/src/antlr/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/antlrHelper/CVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -990,11 +720,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/codearea.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/codearea.css" />
     <entry file="file://$PROJECT_DIR$/src/view/ide.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1013,20 +739,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/commands/controlled/DoWhileCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/commands/controlled/ForCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/commands/controlled/DoWhileCommand.java" />
+    <entry file="file://$PROJECT_DIR$/src/model/commands/controlled/ForCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/model/commands/controlled/ForUpToCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -1061,13 +775,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/commands/evaluation/ArrayInitializeCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/commands/evaluation/ArrayInitializeCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/model/commands/controlled/IfCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
@@ -1078,13 +786,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/commands/evaluation/MappingCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/commands/evaluation/MappingCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/model/commands/evaluation/AssignmentCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1095,13 +797,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/commands/simple/IncDecCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/commands/simple/IncDecCommand.java" />
     <entry file="file://$PROJECT_DIR$/src/model/commands/simple/FunctionCallCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1122,13 +818,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/handlers/FileHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/handlers/FileHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/model/commands/simple/ScanCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1189,6 +879,35 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test cases/question3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test cases/question4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test cases/question5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test cases/question7.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test cases/question8.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
