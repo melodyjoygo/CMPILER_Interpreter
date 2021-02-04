@@ -51,23 +51,6 @@ public class RunHelper {
         OutputManager.getInstance().setConsole(console);
         OutputManager.getInstance().resetOutputManager();
         OutputManager.getInstance().setConsole(console);
-
-        // if((input.indexOf("x = 2")!=-1) && (input.indexOf("y = 2")!=-1) && (input.indexOf("z = 2")!=-1) ){
-        //     OutputManager.getInstance().addoutputLog("Value is: 32.0");
-        //     //System.out.println("32!");
-        // }
-        // else if((input.indexOf("x = -1")!=-1) && (input.indexOf("y = -2")!=-1) && (input.indexOf("z = -3")!=-1)){
-        //     OutputManager.getInstance().addoutputLog("Value is: -24.0");
-        //     //System.out.println("32!");
-        // }
-        // else if((input.indexOf("x = 1")!=-1) && (input.indexOf("y = 1")!=-1) && (input.indexOf("z = x+1")!=-1)){
-        //     OutputManager.getInstance().addoutputLog("Value is: 40.0");
-        //     //System.out.println("32!");
-        // }
-        // else if((input.indexOf("x = 0")!=-1) && (input.indexOf("y = 0")!=-1) && (input.indexOf("z = 0")!=-1)){
-        //     OutputManager.getInstance().addoutputLog("Value is: 44.0");
-        //     //System.out.println("32!");
-        // }
             
 
         CParser parser = getParser(input);
