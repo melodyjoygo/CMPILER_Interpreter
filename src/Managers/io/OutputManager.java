@@ -32,7 +32,7 @@ public class OutputManager {
     public String getInput(String message){
 
         ide.inputForm.InputDialog dialog = new InputDialog();
-        dialog.setTitle("UnoPls - Scan Function");
+        dialog.setTitle("Scan");
         dialog.setTextField(message);
         dialog.pack();
         dialog.setVisible(true);

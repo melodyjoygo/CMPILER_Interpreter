@@ -42,27 +42,27 @@ public class SyntaxErrorListener extends BaseErrorListener{
         //Cleaning up error messages
         // Checks different instances of Recognition Exceptions
         if(e instanceof InputMismatchException) {
-            msg = "<--- check mo to sir may nakalimutan atang ka partner - InputMismatchException";
+            msg = "Input Mismatch Exception";
         }
         if(e instanceof NoViableAltException) {
-            msg = "<--- pre parang di pa ata to tapos - NoViableAltException";
+            msg = "No Viable Alt Exception";
         }
         if(e instanceof LexerNoViableAltException) {
-            msg = "<--- alam mo yung stackoverflow pre? dun ka muna - LexerNoViableAltException";
+            msg = "Lexer No Viable Alt Exception";
         }
         if(e instanceof FailedPredicateException) {
-            msg = "ano ba sinusubukan mo sabihin awit check documentation - FailedPredicateException";
+            msg = "Failed Predicate Exception";
         }
 
         //Special cases
         if(msg.contains("extraneous input")) {
-            msg = "<--- feeling ko sumobra ka dito pre - Extraneous input";
+            msg = "Extraneous input";
         }
         else if(msg.contains("missing 'up to'")) {
-            msg = "<--- my dude 'up to' ata ibig mong sabihin";
+            msg = "Missing 'up to'";
         }
         else if(msg.contains("missing '}'")) {
-            msg = "missing yung bracket sana all miss";
+            msg = "Missing closin curly bracket";
         }
         if(syntaxErrLine != line) {
             System.err.println("Syntax Error(" + line + "," + charPositionInLine + ") : Token '" + ((Token) offendingSymbol).getText() + "' " + msg);

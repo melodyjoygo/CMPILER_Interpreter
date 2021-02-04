@@ -126,7 +126,7 @@ public class RunHelper {
         System.out.println(antlrAST.toStringTree(parser));
 
         //show AST in GUI
-        JFrame frame = new JFrame("Antlr AST");
+        JFrame frame = new JFrame("Parse Tree");
         JPanel panel = new JPanel();
         TreeViewer viewer = new TreeViewer(Arrays.asList(parser.getRuleNames()),antlrAST);
         viewer.setScale(1.5); // Scale a little

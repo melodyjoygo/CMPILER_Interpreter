@@ -143,7 +143,7 @@ public class EvaluateCommand implements ICommand, ParseTreeListener {
             else{
                 SemanticErrorManager.getInstance().addSemanticError(
                         "Semantic Error("+parserRuleContext.getStart().getLine()+ ":" +parserRuleContext.getStart().getCharPositionInLine()+")" +
-                                "parang wala naman yung variable '" + parserRuleContext.getText() + "' sa scope pre.");
+                                "Variable '" + parserRuleContext.getText() + "' was not initialized in scope");
                 this.hasError = true;
             }
         }

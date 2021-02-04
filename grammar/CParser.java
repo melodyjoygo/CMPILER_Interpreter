@@ -1,4 +1,4 @@
-// Generated from UnoPls.g4 by ANTLR 4.9.1
+// Generated from C.g4 by ANTLR 4.9.1
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -281,7 +281,7 @@ public class UnoPlsParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "UnoPls.g4"; }
+	public String getGrammarFileName() { return "C.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }

@@ -1,6 +1,5 @@
 package Managers.symbols;
 
-import Managers.errors.SemanticErrorManager;
 import representations.Value;
 
 import java.util.HashMap;

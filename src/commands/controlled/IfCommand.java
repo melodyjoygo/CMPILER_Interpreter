@@ -25,14 +25,14 @@ public class IfCommand implements IConditionalCommand {
         EvaluateCommand evaluateCommand = new EvaluateCommand(conditionalExpression);
         evaluateCommand.execute();
         Object evaluation = evaluateCommand.evaluateExpression();
-        boolean shakesphere = false;
+        boolean bool = false;
         if(Double.valueOf((String) evaluation) > 0.0){
-            shakesphere = true;
+            bool = true;
         }
 
-        System.out.println("Executing Commands inside of if - " + shakesphere);
+        System.out.println("Executing Commands inside of if - " + bool);
 
-        if(shakesphere){
+        if(bool){
             System.out.println("positive");
             for (ICommand command: positiveCommands) {
                 command.execute();

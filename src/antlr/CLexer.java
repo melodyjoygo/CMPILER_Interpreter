@@ -1,4 +1,4 @@
-package antlr;// Generated from UnoPls.g4 by ANTLR 4.9.1
+package antlr;// Generated from C.g4 by ANTLR 4.9.1
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -162,7 +162,7 @@ public class CLexer extends Lexer {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "UnoPls.g4"; }
+	public String getGrammarFileName() { return "C.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }

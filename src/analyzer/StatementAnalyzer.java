@@ -49,7 +49,7 @@ public class StatementAnalyzer {
             ForUpToCommand forUpToCommand = new ForUpToCommand(identifierContext, expressionContext);
             CommandControlManager.getInstance().initializeCommand(forUpToCommand, forUpToCommand.getControlType());
         }
-        //TODO AYUSIN MO TO HAYUP, magulo pero pwede na siguro
+
         else if(statementCtx.statementWithoutTrailingSubstatement() != null){
 
             // return statement

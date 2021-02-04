@@ -5,7 +5,6 @@ import commands.ICommand;
 import commands.controlled.IConditionalCommand;
 import commands.controlled.IControlledCommand;
 
-import java.util.ArrayList;
 import java.util.Stack;
 
 public class CommandControlManager {

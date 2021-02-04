@@ -59,7 +59,7 @@
                 <Menu mnemonicParsing="false" text="Run">
                     <items>
                         <MenuItem mnemonicParsing="false" onAction="#checkParseTree" text="Check parse tree" />
-                        <MenuItem mnemonicParsing="false" onAction="#run" text="gumana ka pls" />
+                        <MenuItem mnemonicParsing="false" onAction="#run" text="Run" />
                     </items>
                 </Menu>
             </menus>
