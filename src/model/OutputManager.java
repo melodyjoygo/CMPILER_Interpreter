@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 public class OutputManager {
 
+    //Singleton
     private static OutputManager sharedInstance = null;
     private static ArrayList<String> outputLogs;
     private static TextFlow console;

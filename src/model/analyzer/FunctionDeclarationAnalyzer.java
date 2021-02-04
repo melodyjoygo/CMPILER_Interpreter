@@ -25,12 +25,19 @@ public class FunctionDeclarationAnalyzer implements ParseTreeListener {
     }
 
     public void analyze(CParser.FunctionDeclarationContext functionDeclarationContext){
-        PrimitiveType resultType = PrimitiveType.fromString(functionDeclarationContext.methodHeader().result().getText()); 
-        String functionName = functionDeclarationContext.methodHeader().methodDeclarator().identifier().getText(); 
+//        System.out.println(functionDeclarationContext.getText());
+
+        //Create a new function object
+        PrimitiveType resultType = PrimitiveType.fromString(functionDeclarationContext.methodHeader().result().getText()); // gets result type
+        String functionName = functionDeclarationContext.methodHeader().methodDeclarator().identifier().getText(); // get function name
         System.out.println("Function declaration: " + functionName);
         function = new Method(functionName,null,resultType);
 
         SymbolTableManager.getInstance().addFunction(functionName, function);
+
+        //Walk the context in order to initialize variables
+
+        //Set current uno function in order to pass it to other visit model.commands.commands
         SymbolTableManager.getInstance().setCurrentFunction(function);
         SymbolTableManager.getInstance().setCurrentScope(function.getFunctionScope());
 
@@ -43,16 +50,18 @@ public class FunctionDeclarationAnalyzer implements ParseTreeListener {
 
     @Override
     public void visitTerminal(TerminalNode terminalNode) {
-        //
+
     }
 
     @Override
     public void visitErrorNode(ErrorNode errorNode) {
-        //
+
     }
 
     @Override
     public void enterEveryRule(ParserRuleContext parserRuleContext) {
+//        if(parserRuleContext instanceof )
+        // After the walk, the local variables of the scope's function will contain the parameters
         if(parserRuleContext instanceof CParser.FormalParameterContext){
             CParser.FormalParameterContext formalParameterContext = (CParser.FormalParameterContext) parserRuleContext;
             VariableAnalyzer variableAnalyzer = new VariableAnalyzer();
@@ -70,6 +79,6 @@ public class FunctionDeclarationAnalyzer implements ParseTreeListener {
 
     @Override
     public void exitEveryRule(ParserRuleContext parserRuleContext) {
-        //
+
     }
 }

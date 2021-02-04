@@ -9,6 +9,7 @@ public class ExecutionManager {
     private static ArrayList<ICommand> executionList = new ArrayList<ICommand>();
     private boolean foundEntryPoint = false;
 
+    //Implementation of singleton
     public static ExecutionManager getInstance(){
         if(sharedInstance == null){
             sharedInstance = new ExecutionManager();
@@ -45,6 +46,7 @@ public class ExecutionManager {
 
     public void execute(){
         for(ICommand command : executionList){
+//            System.out.println(command);
             command.execute();
         }
     }

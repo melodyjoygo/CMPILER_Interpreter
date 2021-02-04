@@ -14,6 +14,7 @@ public class SymbolTableManager {
     private static SymbolTableManager sharedInstance = null;
 
 
+    //Implementation of singleton
     public static SymbolTableManager getInstance(){
         if(sharedInstance == null){
             sharedInstance = new SymbolTableManager();
@@ -29,7 +30,10 @@ public class SymbolTableManager {
         currentScope = null;
         functions = null;
     }
+    //
 
+
+    // Scope Managing
     public void setCurrentScope(Scope scope){
         this.currentScope = scope;
     }
@@ -39,6 +43,7 @@ public class SymbolTableManager {
     }
 
 
+    // Function Managing
     public Method getCurrentFunction(){
         return this.currentFunction;
     }

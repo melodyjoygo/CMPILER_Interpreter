@@ -23,6 +23,7 @@ public class InputDialog extends JDialog {
     }
 
     private void onOK() {
+        // add your code here
         result = textField1.getText();
         dispose();
     }

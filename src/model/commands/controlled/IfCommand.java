@@ -9,8 +9,8 @@ import java.util.*;
 
 public class IfCommand implements IConditionalCommand, IControlledCommand {
 
-    private ArrayList<ICommand> positiveCommands; 
-    private ArrayList<ICommand> negativeCommands; 
+    private ArrayList<ICommand> positiveCommands; //list of model.commands.commands to execute if the condition holds true
+    private ArrayList<ICommand> negativeCommands; //list of model.commands.commands to execute if the condition holds false
 
     private CParser.ExpressionContext conditionalExpression;
 
@@ -22,6 +22,7 @@ public class IfCommand implements IConditionalCommand, IControlledCommand {
 
     @Override
     public void execute() {
+        //Check evalute conditional expression if true ba or hindi
         EvaluateCommand evaluateCommand = new EvaluateCommand(conditionalExpression);
         evaluateCommand.execute();
         Object evaluation = evaluateCommand.evaluateExpression();
@@ -30,13 +31,16 @@ public class IfCommand implements IConditionalCommand, IControlledCommand {
             bool = true;
         }
 
+        //System.out.println("Executing Commands inside of if - " + bool);
 
         if(bool){
+            //System.out.println("positive");
             for (ICommand command: positiveCommands) {
                 command.execute();
             }
         }
         else{
+            //System.out.println("negative");
             for (ICommand command: negativeCommands) {
                 command.execute();
             }
