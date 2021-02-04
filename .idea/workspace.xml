@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Initialized files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grammar/C.interp" beforeDir="false" />
@@ -119,6 +120,10 @@
       <change beforePath="$PROJECT_DIR$/test_cases/interpreter/while.unopls" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test_cases/parser/parser.unopls" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test_cases/parser/test1.unopls" beforeDir="false" />
+=======
+    <list default="true" id="a27f791c-4772-45b5-9176-8f8b488a0e7b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/test cases/question7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test cases/question7.txt" afterDir="false" />
+>>>>>>> parent of 17c0599... Revert "edited test cases"
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -181,15 +186,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/commands/simple/FunctionCallCommand.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="17">
               <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+=======
+            <state>
+              <caret column="29" selection-start-column="29" selection-end-column="29" />
+>>>>>>> parent of 17c0599... Revert "edited test cases"
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#798#799#0" expanded="true" />
+                <element signature="e#826#827#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/commands/simple/ReturnCommand.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -231,10 +243,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-180">
               <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test cases/question7.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+>>>>>>> parent of 17c0599... Revert "edited test cases"
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/representations/PrimitiveType.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -289,6 +309,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> parent of 17c0599... Revert "edited test cases"
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -445,6 +467,7 @@
             <path>
               <item name="CMPILER_Interpreter" type="b2602c69:ProjectViewProjectNode" />
               <item name="CMPILER_Interpreter" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="antlr" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -472,6 +495,9 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
               <item name="representations" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="test cases" type="462c0819:PsiDirectoryNode" />
+>>>>>>> parent of 17c0599... Revert "edited test cases"
             </path>
           </expand>
           <select />
@@ -502,11 +528,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Melody\Term 10\CMPILER\CMPILER_Interpreter" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="analyzer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DLSU ARAL\cmpiler\UnoPls\lib" />
+      <recent name="D:\DLSU ARAL\cmpiler\UnoPls\src\Managers\symbols" />
+      <recent name="D:\DLSU ARAL\cmpiler\UnoPls\src\antlr" />
+      <recent name="D:\DLSU ARAL\cmpiler\UnoPls\src\ide" />
+      <recent name="D:\DLSU ARAL\cmpiler\UnoPls\test_cases\parser" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="model.errors" />
@@ -518,12 +548,8 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="semantics" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\DLSU ARAL\cmpiler\UnoPls\lib" />
-      <recent name="D:\DLSU ARAL\cmpiler\UnoPls\src\Managers\symbols" />
-      <recent name="D:\DLSU ARAL\cmpiler\UnoPls\src\antlr" />
-      <recent name="D:\DLSU ARAL\cmpiler\UnoPls\src\ide" />
-      <recent name="D:\DLSU ARAL\cmpiler\UnoPls\test_cases\parser" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Melody\Term 10\CMPILER\CMPILER_Interpreter" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -956,10 +982,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="262">
           <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+=======
+        <state>
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+>>>>>>> parent of 17c0599... Revert "edited test cases"
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1190,6 +1222,38 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/test cases/question3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test cases/question4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test cases/question5.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test cases/question8.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test cases/question7.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> parent of 17c0599... Revert "edited test cases"
   </component>
   <component name="masterDetails">
     <states>
