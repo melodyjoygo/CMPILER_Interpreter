@@ -1,6 +1,6 @@
 package antlr;// Generated from C.g4 by ANTLR 4.9.1
-import analyzer.FunctionDeclarationAnalyzer;
-import analyzer.MainAnalyzer;
+import model.analyzer.FunctionDeclarationAnalyzer;
+import model.analyzer.MainAnalyzer;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
