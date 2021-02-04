@@ -31,15 +31,21 @@ public class IfCommand implements IConditionalCommand {
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         System.out.println("Executing Commands inside of if - " + bool);
 
         if(bool){
             System.out.println("positive");
 =======
+=======
+>>>>>>> parent of c71d38e... last push
         //System.out.println("Executing Commands inside of if - " + bool);
 
         if(bool){
             //System.out.println("positive");
+<<<<<<< HEAD
+>>>>>>> parent of c71d38e... last push
+=======
 >>>>>>> parent of c71d38e... last push
             for (ICommand command: positiveCommands) {
                 command.execute();
@@ -47,7 +53,11 @@ public class IfCommand implements IConditionalCommand {
         }
         else{
 <<<<<<< HEAD
+<<<<<<< HEAD
             System.out.println("negative");
+=======
+            //System.out.println("negative");
+>>>>>>> parent of c71d38e... last push
 =======
             //System.out.println("negative");
 >>>>>>> parent of c71d38e... last push

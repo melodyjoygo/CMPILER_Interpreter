@@ -32,7 +32,11 @@ public class CommandControlManager {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public void resetConditionalManager(){ //Call this when leaving a controlled command
+=======
+    public static void resetConditionalManager(){ //Call this when leaving a controlled command
+>>>>>>> parent of c71d38e... last push
 =======
     public static void resetConditionalManager(){ //Call this when leaving a controlled command
 >>>>>>> parent of c71d38e... last push
@@ -89,7 +93,11 @@ public class CommandControlManager {
 
     public void exitedCommand(){
 <<<<<<< HEAD
+<<<<<<< HEAD
         System.out.println("Exited controlled command: " + this.controlType);
+=======
+        //System.out.println("Exited controlled command: " + this.controlType);
+>>>>>>> parent of c71d38e... last push
 =======
         //System.out.println("Exited controlled command: " + this.controlType);
 >>>>>>> parent of c71d38e... last push

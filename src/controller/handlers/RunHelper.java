@@ -53,6 +53,7 @@ public class RunHelper {
         OutputManager.getInstance().setConsole(console);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         System.out.println("Running Program with the following input: ");
         System.out.println(input);
@@ -61,6 +62,8 @@ public class RunHelper {
 
         // Get generated parse tree
 =======
+=======
+>>>>>>> parent of c71d38e... last push
         // if((input.indexOf("x = 2")!=-1) && (input.indexOf("y = 2")!=-1) && (input.indexOf("z = 2")!=-1) ){
         //     OutputManager.getInstance().addoutputLog("Value is: 32.0");
         //     //System.out.println("32!");
@@ -79,6 +82,9 @@ public class RunHelper {
         // }
             
 
+<<<<<<< HEAD
+>>>>>>> parent of c71d38e... last push
+=======
 >>>>>>> parent of c71d38e... last push
         CParser parser = getParser(input);
 

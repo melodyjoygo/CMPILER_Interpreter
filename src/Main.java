@@ -35,7 +35,11 @@ public class Main extends Application {
 //    Setup GUI of the IDE
     private void setupComponents(){
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+        /* comment */
+>>>>>>> parent of c71d38e... last push
 =======
         /* comment */
 >>>>>>> parent of c71d38e... last push
