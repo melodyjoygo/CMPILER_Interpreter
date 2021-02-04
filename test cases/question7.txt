@@ -1,31 +1,30 @@
 main(){
-    int tableSize;
-    scan("Enter table size: ", tableSize);
-    String row;
-    int y = 0;
-    int x = 0;
-    int z;
-    for y up to tableSize + 1{
-        for x up to tableSize{
-
-            if(x == 0){
-                if(y==0){
-                   row = "     ";
+    int size;
+    scan("Enter table size: ", size);
+    String result;
+    int i = 0;
+    int j = 0;
+    int k;
+    for i up to size + 1{
+        for j up to size{
+            if(j == 0){
+                if(i==0){
+                   result = "     ";
                 }
                 else{
-                    row = y + "     ";
+                    result = i + "     ";
                 }
             }
-            if(y==0){
-        z = x+1;
-                row = row + z + "     ";
+            if(i==0){
+        k = j+1;
+                result = result + k + "     ";
             }
             else{
-        z = (x+1)*y;
-                row = row + z + "     ";
+        k = (j+1)*i;
+                result = result + k + "     ";
             }
         }
-    x = 0;
-        print(row);
+    j = 0;
+        print(result);
     }
   }
