@@ -26,5 +26,6 @@ public class ReturnCommand implements ICommand {
         Object value = evaluationCommand.evaluateExpression();
         Value functionReturn = method.getReturnValue();
         functionReturn.setValue(value);
-       }
+        System.out.println("Return " + (String) functionReturn.getValue());
+    }
 }
