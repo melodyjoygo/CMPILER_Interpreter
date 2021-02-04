@@ -31,7 +31,7 @@ public class CommandControlManager {
         return sharedInstance;
     }
 
-    public void resetConditionalManager(){ //Call this when leaving a controlled command
+    public static void resetConditionalManager(){ //Call this when leaving a controlled command
         sharedInstance = null;
     }
 
@@ -78,13 +78,10 @@ public class CommandControlManager {
         else{
             ((IControlledCommand)currentCommand).addCommand(command);
         }
-//        if(this.controlType == IControlledCommand.ControlTypeEnum.WHILE_CONTROL){
-//            ((IControlledCommand)currentCommand).addCommand(command);
-//        }
     }
 
     public void exitedCommand(){
-        System.out.println("Exited controlled command: " + this.controlType);
+        //System.out.println("Exited controlled command: " + this.controlType);
         if(commandList.isEmpty()){
             this.resetConditionalManager();
         }
@@ -101,7 +98,11 @@ public class CommandControlManager {
         }
     }
 
-    public void enteredNegative(){
+    public static void enteredNegative(){
         isInPositive = false;
+    }
+
+    public boolean getIsInPositive() {
+        return this.isInPositive;
     }
 }

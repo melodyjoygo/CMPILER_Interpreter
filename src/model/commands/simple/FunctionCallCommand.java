@@ -87,17 +87,17 @@ public class FunctionCallCommand implements ICommand, ParseTreeListener {
     }
 
     public void getReturn(){
-
+        //comment
     }
 
     @Override
     public void visitTerminal(TerminalNode terminalNode) {
-
+        //comment
     }
 
     @Override
     public void visitErrorNode(ErrorNode errorNode) {
-
+        //comment
     }
 
     @Override

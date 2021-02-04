@@ -34,7 +34,7 @@ public class Main extends Application {
 
 //    Setup GUI of the IDE
     private void setupComponents(){
-
+        /* comment */
     }
 
 // Start of code for editor keyword highlighting
