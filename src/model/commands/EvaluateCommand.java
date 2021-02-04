@@ -12,7 +12,6 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.antlr.v4.runtime.tree.TerminalNode;
 import model.representations.Value;
-import model.commands.simple.FunctionCallCommand;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -37,7 +36,6 @@ public class EvaluateCommand implements ICommand, ParseTreeListener {
     @Override
     public void execute() {
         this.modifiedExpression = expressionContext.getText();
-        System.err.println(expressionContext.getText() + "evaluate command");
         ParseTreeWalker treeWalker = new ParseTreeWalker();
         treeWalker.walk(this, expressionContext);
 
@@ -45,11 +43,11 @@ public class EvaluateCommand implements ICommand, ParseTreeListener {
         if(isNumeric){
             isNumeric = !this.modifiedExpression.contains("\"") && !this.modifiedExpression.contains("\'");
         }
-        //Evaluate expression if the expression does not contain any model.checkers
+
         if(!hasError){
-            //checks for the data type before evaluating
+
             if(!isNumeric){
-                // == or !=
+
                 if (this.modifiedExpression.contains("==") || this.modifiedExpression.contains("!=")) {
                     String[] strings = {"", ""};
 
@@ -101,11 +99,11 @@ public class EvaluateCommand implements ICommand, ParseTreeListener {
                     this.result = temp;
                 }
             }
-            //Numeric Expressions
+
             else{
                 BigDecimal e = new Expression(this.modifiedExpression)
                         .setPrecision(3)
-                        .eval(); // 0.333;
+                        .eval();
                 this.result = e.floatValue() + "";
             }
         }
@@ -126,23 +124,20 @@ public class EvaluateCommand implements ICommand, ParseTreeListener {
     public void enterEveryRule(ParserRuleContext parserRuleContext) {
 
         if(parserRuleContext instanceof CParser.LiteralContext){
-            //this.result = parserRuleContext.getText(); do nothing
+
         }
 
         else if(parserRuleContext instanceof CParser.MethodInvocation_lfno_primaryContext){
             this.isFunction = true;
-            System.out.println("Evaluate function");
+
             this.modifiedExpression = (String) new FunctionCallCommand((CParser.MethodInvocation_lfno_primaryContext)parserRuleContext).evaluateFunctionCall().getValue();
-            //String temp = (String) new FunctionCallCommand((UnoPlsParser.MethodInvocation_lfno_primaryContext)parserRuleContext).evaluateFunctionCall().getValue();
+            String temp = (String) new FunctionCallCommand((CParser.MethodInvocation_lfno_primaryContext)parserRuleContext).evaluateFunctionCall().getValue();
             this.modifiedExpression.replace(parserRuleContext.getText(), temp);
         }
 
-        //If the evaluator encounters an identifier context
+
         else if(parserRuleContext instanceof CParser.IdentifierContext && !isFunction){
-//            System.err.println("Evaluate walk identifier context " + parserRuleContext.getText());
-//            System.out.println(SymbolTableManager.getInstance().getCurrentScope().getId());
             if(SymbolTableManager.getInstance().getCurrentScope().containsVariableAllScopes(parserRuleContext.getText())){
-                System.out.println(this.modifiedExpression + " evaluate " + parserRuleContext.getText() + " " + SymbolTableManager.getInstance().getCurrentFunction().getFunctionName());
                 Value variable = SymbolTableManager.getInstance().getCurrentFunction().getFunctionScope().findVariableValueAllScopes(parserRuleContext.getText());
 
                 String temp = (String) variable.getValue();

@@ -32,12 +32,10 @@ public class FunctionCallCommand implements ICommand, ParseTreeListener {
         this.methodInvocationContext = methodInvocationContext;
         this.functionName = methodInvocationContext.methodName().identifier().getText();
 
-        // get function template, the function template does not need to be cloned because all we want is the ICommand List,
-        //                        The parameters are reset every function call
         method = SymbolTableManager.getInstance().findFunction(functionName);
         this.functionName = method.getFunctionName();
 
-        //walk the function call to get parameters
+
         parameterValue = new ArrayList<>();
 
     }
@@ -47,28 +45,24 @@ public class FunctionCallCommand implements ICommand, ParseTreeListener {
         this.methodInvocation_lfno_primaryContext = methodInvocationContext;
         this.functionName = methodInvocationContext.methodName().identifier().getText();
 
-        // get function template, the function template does not need to be cloned because all we want is the ICommand List,
-        //                        The parameters are reset every function call
         method = SymbolTableManager.getInstance().findFunction(functionName);
         this.functionName = method.getFunctionName();
-        System.out.println("Function call in variable assignment in " + SymbolTableManager.getInstance().getCurrentFunction().getFunctionName());
 
         parameterValue = new ArrayList<>();
 
     }
 
     public Value evaluateFunctionCall(){
-//        System.out.println("Executing function call in an expression in function " + parentFunction.getFunctionName());
+
         this.execute();
         return this.method.getReturnValue();
     }
 
     @Override
     public void execute() {
-        System.out.println("Executing function call: " + functionName + "" );
+
         parentFunction = SymbolTableManager.getInstance().getCurrentFunction();
-        // set the paremeters of the function
-        //walk the function call to get parameters
+
         ParseTreeWalker treeWalker = new ParseTreeWalker();
         if(isNormalCall){
             treeWalker.walk(this, this.methodInvocationContext);
@@ -102,9 +96,8 @@ public class FunctionCallCommand implements ICommand, ParseTreeListener {
 
     @Override
     public void enterEveryRule(ParserRuleContext parserRuleContext) {
-        // if the function call encounters an expression, the expression is counted as a parameter of the function
+
         if(parserRuleContext instanceof CParser.ExpressionContext){
-//            Value parameterValue = new EvaluateCommand((CParser.ExpressionContext) parserRuleContext);
             EvaluateCommand evaluateCommand = new EvaluateCommand((CParser.ExpressionContext) parserRuleContext);
             evaluateCommand.execute();
 

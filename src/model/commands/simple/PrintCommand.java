@@ -2,10 +2,13 @@ package model.commands.simple;
 
 import model.OutputManager;
 import antlr.CParser;
+import model.SymbolTableManager;
+import model.commands.EvaluateCommand;
 import model.commands.ICommand;
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
+import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 public class PrintCommand implements ICommand, ParseTreeListener {
@@ -22,15 +25,14 @@ public class PrintCommand implements ICommand, ParseTreeListener {
 
     @Override
     public void execute() {
-//        ParseTreeWalker treeWalker = new ParseTreeWalker();
-//        treeWalker.walk(this, this.functionCallerContext);
-//        EvaluateCommand evaluateCommand = new EvaluateCommand(expressionContext);
-//        evaluateCommand.execute();
-//        this.evaluatedExpression = (String) evaluateCommand.evaluateExpression();
-//        System.out.println("Executing Print Command in function: " + SymbolTableManager.getInstance().getCurrentFunction().getFunctionName());
-////        evaluatedExpression = evaluatedExpression.replace(".", "");
-////        evaluatedExpression = evaluatedExpression.replace("0", "");
-        OutputManager.getInstance().addoutputLog("Welcome Melody Tan Go!");
+        ParseTreeWalker treeWalker = new ParseTreeWalker();
+        treeWalker.walk(this, this.functionCallerContext);
+        EvaluateCommand evaluateCommand = new EvaluateCommand(expressionContext);
+        evaluateCommand.execute();
+        this.evaluatedExpression = (String) evaluateCommand.evaluateExpression();
+        evaluatedExpression = evaluatedExpression.replace(".", "");
+        evaluatedExpression = evaluatedExpression.replace("0", "");
+        OutputManager.getInstance().addoutputLog(evaluatedExpression);
     }
 
     @Override

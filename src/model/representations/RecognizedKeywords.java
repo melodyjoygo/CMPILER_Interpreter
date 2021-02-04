@@ -15,9 +15,6 @@ public class RecognizedKeywords {
     public static String BOOLEAN_FALSE = "false";
 
 
-    /*
-     * Returns true if the keywords match. This is case-sensitive
-     */
     public static boolean matchesKeyword(String keyword, String textToMatch) {
         if(textToMatch.contains(keyword)) {
             return true;
