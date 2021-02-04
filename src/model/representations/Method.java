@@ -35,7 +35,6 @@ public class Method {
 
     public void initParameters(LinkedHashMap<String, Value> parameters){
         this.parameters = parameters;
-        // Add the parameters to the function scope (local variables)
         for(int i = 0; i < this.parameters.size(); i++) {
             Value value = (Value) this.parameters.values().toArray()[i];
             this.functionScope.addVariable((String) this.parameters.keySet().toArray()[i], value);
@@ -43,15 +42,12 @@ public class Method {
     }
 
     public void setParameters(ArrayList<Value> parameterValue){
-        //Add errror checking if sobra or kulang yung parameters
         if(parameterValue.size() != this.parameters.size()){
-            System.err.println("Mismatch number of parameter type");
+            //comment
         }
-        //Reassign the parameters to locals scope so that they have not null values
         else{
             for(int i = 0; i < this.parameters.size(); i++) {
                 Value value = (Value) this.parameters.values().toArray()[i];
-                //Error checking of type mismatch is done when setting the value in the value function
                 value.setValue(parameterValue.get(i).getValue());
                 this.functionScope.reAssignVariable((String) this.parameters.keySet().toArray()[i], value);
             }
