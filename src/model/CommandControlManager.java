@@ -10,14 +10,15 @@ public class CommandControlManager {
     private static CommandControlManager sharedInstance = null;
     private static Stack<ICommand> commandList;
     private static ICommand currentCommand;
-    private static boolean isInPositive = true; 
+    private static boolean isInPositive = true; // For if statements place it in
     private static boolean isInControl = false;
     private static IControlledCommand.ControlTypeEnum controlType;
     private CommandControlManager(){
 
     }
 
-    public static CommandControlManager getInstance(){ 
+    //Implementation of singleton
+    public static CommandControlManager getInstance(){ // Call this when entering a controlled command
         if(sharedInstance == null){
             sharedInstance = new CommandControlManager();
             commandList = new Stack<>();
@@ -30,15 +31,19 @@ public class CommandControlManager {
         return sharedInstance;
     }
 
-    public static void resetConditionalManager(){ 
+    public void resetConditionalManager(){ //Call this when leaving a controlled command
         sharedInstance = null;
     }
 
+    //Manager Related
     public boolean isControl(){
         return this.isInControl;
     }
 
+    //Command Related
     public void initializeCommand(ICommand command, IControlledCommand.ControlTypeEnum controlType){
+        // Initialize command is called every time the statement model.analyzer.analyzer sees an if, ifelse statement
+        // Add to the current function if it is the base if statement, else add it to the control
         if(!isInControl){
             System.out.println("Adding controlled command to function: " + SymbolTableManager.getInstance().getCurrentFunction().getFunctionName());
             SymbolTableManager.getInstance().getCurrentFunction().addCommand(command);
@@ -58,6 +63,8 @@ public class CommandControlManager {
 
     // Add command
     public void addCommand(ICommand command){
+        // Add command should only be called when it is inside a control function
+        // Add the command to the positive or negative part of the command
         if(this.controlType == IControlledCommand.ControlTypeEnum.CONDITIONAL_IF){
             if(isInPositive){
                 System.err.println("Added to positive if");
@@ -71,9 +78,13 @@ public class CommandControlManager {
         else{
             ((IControlledCommand)currentCommand).addCommand(command);
         }
+//        if(this.controlType == IControlledCommand.ControlTypeEnum.WHILE_CONTROL){
+//            ((IControlledCommand)currentCommand).addCommand(command);
+//        }
     }
 
     public void exitedCommand(){
+        System.out.println("Exited controlled command: " + this.controlType);
         if(commandList.isEmpty()){
             this.resetConditionalManager();
         }
@@ -90,11 +101,7 @@ public class CommandControlManager {
         }
     }
 
-    public static void enteredNegative(){
+    public void enteredNegative(){
         isInPositive = false;
-    }
-
-    public boolean getIsInPositive() {
-        return this.isInPositive;
     }
 }

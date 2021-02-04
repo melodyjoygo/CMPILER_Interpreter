@@ -12,7 +12,6 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
 import org.antlr.v4.runtime.tree.TerminalNode;
 import model.representations.Value;
-import model.commands.simple.FunctionCallCommand;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -31,7 +30,6 @@ public class EvaluateCommand implements ICommand, ParseTreeListener {
         this.expressionContext = expressionContext;
         this.hasError = false;
         this.isFunction = false;
-        this.isNumeric = true;
     }
 
     @Override
@@ -42,12 +40,11 @@ public class EvaluateCommand implements ICommand, ParseTreeListener {
         treeWalker.walk(this, expressionContext);
 
 
-        if(isNumeric){
-            isNumeric = !this.modifiedExpression.contains("\"") && !this.modifiedExpression.contains("\'");
-        }
+
         //Evaluate expression if the expression does not contain any model.checkers
         if(!hasError){
             //checks for the data type before evaluating
+            isNumeric = !this.modifiedExpression.contains("\"") && !this.modifiedExpression.contains("\'");
             if(!isNumeric){
                 // == or !=
                 if (this.modifiedExpression.contains("==") || this.modifiedExpression.contains("!=")) {
@@ -97,8 +94,7 @@ public class EvaluateCommand implements ICommand, ParseTreeListener {
                     }
                 }
                 else{
-                    String temp = this.modifiedExpression.replaceAll("\\+", "");
-                    this.result = temp;
+                    this.result = this.modifiedExpression;
                 }
             }
             //Numeric Expressions
@@ -114,12 +110,12 @@ public class EvaluateCommand implements ICommand, ParseTreeListener {
 
     @Override
     public void visitTerminal(TerminalNode terminalNode) {
-        //comment
+
     }
 
     @Override
     public void visitErrorNode(ErrorNode errorNode) {
-        //comment
+
     }
 
     @Override
@@ -133,24 +129,16 @@ public class EvaluateCommand implements ICommand, ParseTreeListener {
             this.isFunction = true;
             System.out.println("Evaluate function");
             this.modifiedExpression = (String) new FunctionCallCommand((CParser.MethodInvocation_lfno_primaryContext)parserRuleContext).evaluateFunctionCall().getValue();
-            String temp = (String) new FunctionCallCommand((CParser.MethodInvocation_lfno_primaryContext)parserRuleContext).evaluateFunctionCall().getValue();
-            this.modifiedExpression.replace(parserRuleContext.getText(), temp);
         }
 
+        //If the evaluator encounters an identifier context
         else if(parserRuleContext instanceof CParser.IdentifierContext && !isFunction){
+//            System.err.println("Evaluate walk identifier context " + parserRuleContext.getText());
+//            System.out.println(SymbolTableManager.getInstance().getCurrentScope().getId());
             if(SymbolTableManager.getInstance().getCurrentScope().containsVariableAllScopes(parserRuleContext.getText())){
                 System.out.println(this.modifiedExpression + " evaluate " + parserRuleContext.getText() + " " + SymbolTableManager.getInstance().getCurrentFunction().getFunctionName());
                 Value variable = SymbolTableManager.getInstance().getCurrentFunction().getFunctionScope().findVariableValueAllScopes(parserRuleContext.getText());
-
-                String temp = (String) variable.getValue();
-                if(temp.contains("\"")){
-                    isNumeric = false;
-                }
-
-                temp = temp.replaceAll("\"", "");
-                temp = temp.replaceAll("'","");
-
-                this.modifiedExpression = this.modifiedExpression.replace(parserRuleContext.getText(), temp);
+                this.modifiedExpression = this.modifiedExpression.replace(parserRuleContext.getText(), (CharSequence) variable.getValue());
             }
             else{
                 SemanticErrorManager.getInstance().addSemanticError(
@@ -164,7 +152,7 @@ public class EvaluateCommand implements ICommand, ParseTreeListener {
 
     @Override
     public void exitEveryRule(ParserRuleContext parserRuleContext) {
-        //comment
+
     }
 
 

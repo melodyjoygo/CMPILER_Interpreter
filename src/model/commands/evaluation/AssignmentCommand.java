@@ -33,6 +33,7 @@ public class AssignmentCommand implements ICommand {
     @Override
     public void execute() {
         if(!inVariableDec){
+            System.out.println("Reassigning variable " + leftHand.getText() + " in " + SymbolTableManager.getInstance().getCurrentFunction().getFunctionName());
             EvaluateCommand evaluateCommand = new EvaluateCommand(this.rightHand);
             evaluateCommand.execute();
             Object result = evaluateCommand.evaluateExpression();
@@ -41,6 +42,7 @@ public class AssignmentCommand implements ICommand {
             assignmentScope.reAssignVariable(leftHand.getText(), this.value);
         }
         else{
+            System.out.println("Declaration assignment " + variableName + " in " + SymbolTableManager.getInstance().getCurrentFunction().getFunctionName());
             EvaluateCommand evaluateCommand = new EvaluateCommand(this.rightHand);
             evaluateCommand.execute();
             Object result = evaluateCommand.evaluateExpression();

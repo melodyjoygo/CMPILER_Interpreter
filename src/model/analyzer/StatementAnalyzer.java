@@ -12,10 +12,12 @@ import model.commands.simple.ReturnCommand;
 
 public class StatementAnalyzer {
     public StatementAnalyzer(){
-        //initialize
+
     }
 
     public void analyze(CParser.StatementContext statementCtx) {
+        System.out.println(statementCtx.getText() + "analyze statement model.analyzer.analyzer");
+        //If statement
         if (statementCtx.ifThenStatement() != null) {
             CParser.IfThenStatementContext ifThenStatementContext = statementCtx.ifThenStatement();
             IfCommand ifCommand = new IfCommand(ifThenStatementContext.expression());

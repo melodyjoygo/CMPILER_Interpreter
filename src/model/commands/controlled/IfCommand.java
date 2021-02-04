@@ -2,12 +2,11 @@ package model.commands.controlled;
 
 import antlr.CParser;
 import model.commands.ICommand;
-import model.CommandControlManager;
 import model.commands.EvaluateCommand;
 
 import java.util.*;
 
-public class IfCommand implements IConditionalCommand, IControlledCommand {
+public class IfCommand implements IConditionalCommand {
 
     private ArrayList<ICommand> positiveCommands; //list of model.commands.commands to execute if the condition holds true
     private ArrayList<ICommand> negativeCommands; //list of model.commands.commands to execute if the condition holds false
@@ -31,12 +30,16 @@ public class IfCommand implements IConditionalCommand, IControlledCommand {
             bool = true;
         }
 
+        System.out.println("Executing Commands inside of if - " + bool);
+
         if(bool){
+            System.out.println("positive");
             for (ICommand command: positiveCommands) {
                 command.execute();
             }
         }
         else{
+            System.out.println("negative");
             for (ICommand command: negativeCommands) {
                 command.execute();
             }
@@ -46,16 +49,6 @@ public class IfCommand implements IConditionalCommand, IControlledCommand {
     @Override
     public IControlledCommand.ControlTypeEnum getControlType() {
         return IControlledCommand.ControlTypeEnum.CONDITIONAL_IF;
-    }
-
-    @Override
-    public void addCommand(ICommand command){
-        if(CommandControlManager.getInstance().getIsInPositive()){
-            this.addPositiveCommand(command);
-        }
-        else{
-            this.addNegativeCommand(command);
-        }
     }
 
     @Override

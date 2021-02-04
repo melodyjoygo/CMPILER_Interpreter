@@ -15,6 +15,7 @@ public class Value {
         this.primitiveType = primitiveType;
         this.value = value;
         if(this.primitiveType == PrimitiveType.VOID){
+//            System.err.println("Invalid primitive type");
         }
     }
 
@@ -22,6 +23,10 @@ public class Value {
         this.primitiveType = primitiveType;
     }
 
+
+    /*
+     * Marks this value as final if there is a final keyword
+     */
     public void markFinal() {
         this.finalFlag = true;
     }
@@ -31,6 +36,7 @@ public class Value {
     }
 
     public void setValue(Object value) {
+        //TODO error checking for type mismatch
         this.value = value;
     }
 

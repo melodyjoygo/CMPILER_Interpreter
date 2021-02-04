@@ -65,7 +65,8 @@ public class SyntaxErrorListener extends BaseErrorListener{
             msg = "Missing closin curly bracket";
         }
         if(syntaxErrLine != line) {
-            this.syntaxErrors.add("LINE " + line + "," + charPositionInLine + ":" + " Syntax Error - " + ((Token) offendingSymbol).getText() + "' " + msg);
+            System.err.println("Syntax Error(" + line + "," + charPositionInLine + ") : Token '" + ((Token) offendingSymbol).getText() + "' " + msg);
+            this.syntaxErrors.add("Syntax Error(" + line + "," + charPositionInLine + ") : Token '" + ((Token) offendingSymbol).getText() + "' " + msg);
             syntaxErrLine = line;
         }
     }

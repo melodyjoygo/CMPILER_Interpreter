@@ -15,12 +15,14 @@ public class Scope {
         this.localVariables = new HashMap<>();
     }
 
+    // For child scopes
     public Scope(Scope parentScope){
         int levelcount = 0;
         String parentName = parentScope.getId();
         Scope scope = parentScope;
 
         while (scope.getParentScope() != null){
+            System.out.println(scope.getId());
             levelcount += 1;
             parentName = parentScope.getId();
             scope = parentScope;
@@ -34,11 +36,17 @@ public class Scope {
         return this.parentScope;
     }
 
+    // Variables (add, find, contains)
     public void addVariable(String identifier, Value value){
+        // TODO
+        //type mismatch
         this.localVariables.put(identifier,value);
     }
 
     public void reAssignVariable(String identifier, Value value){
+        // TODO
+        // Check for model.checkers (undeclared variable, variable out of scope, type mismatch
+        System.out.println("Reassigning variable " + identifier + " to " + value.getValue());
         this.localVariables.replace(identifier,value);
     }
 
