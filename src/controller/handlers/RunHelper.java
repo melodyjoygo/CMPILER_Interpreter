@@ -73,6 +73,7 @@ public class RunHelper {
         CParser parser = getParser(input);
 
         ParserRuleContext parserRuleContext = parser.compilationUnit();
+        System.out.println("DEBUG: " + parserRuleContext.toStringTree(parser));
 
 
         if(this.syntaxErrorListener.syntaxErrFlag) {
@@ -101,6 +102,7 @@ public class RunHelper {
             }
             //Else execute all model.commands.commands in the command stack
             else{
+                System.out.println("===========Compiled Variables and Initialized Function Stack. Ready to execute.===========");
                 Method mainFunction = SymbolTableManager.getInstance().findFunction("main");
                 SymbolTableManager.getInstance().setCurrentFunction(mainFunction);
                 SymbolTableManager.getInstance().setCurrentScope(mainFunction.getFunctionScope());
@@ -110,6 +112,15 @@ public class RunHelper {
                 }
 
                 ExecutionManager.getInstance().execute();
+
+                //Fix mo pa to kasi isang bagsakan yung output mo... pano kung may scan in between
+//                for(String outputLogs : outputManager.getOutputLogs()){
+////                    System.out.println("output: " + outputLogs);
+//                    Text log = new Text(outputLogs.replaceAll("_LINEBREAK_", "\n"));
+//                    console.getChildren().add(log);
+//                }
+
+                System.out.println("===========End of Execution.===========");
             }
         }
 
@@ -121,6 +132,9 @@ public class RunHelper {
         String input = codeArea.getText();
         CParser parser = getParser(input);
         ParseTree antlrAST = parser.compilationUnit();
+
+        //show AST in console
+        System.out.println(antlrAST.toStringTree(parser));
 
         //show AST in GUI
         JFrame frame = new JFrame("Parse Tree");
