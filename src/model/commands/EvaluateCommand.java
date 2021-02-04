@@ -137,7 +137,10 @@ public class EvaluateCommand implements ICommand, ParseTreeListener {
             this.modifiedExpression.replace(parserRuleContext.getText(), temp);
         }
 
+        //If the evaluator encounters an identifier context
         else if(parserRuleContext instanceof CParser.IdentifierContext && !isFunction){
+//            System.err.println("Evaluate walk identifier context " + parserRuleContext.getText());
+//            System.out.println(SymbolTableManager.getInstance().getCurrentScope().getId());
             if(SymbolTableManager.getInstance().getCurrentScope().containsVariableAllScopes(parserRuleContext.getText())){
                 System.out.println(this.modifiedExpression + " evaluate " + parserRuleContext.getText() + " " + SymbolTableManager.getInstance().getCurrentFunction().getFunctionName());
                 Value variable = SymbolTableManager.getInstance().getCurrentFunction().getFunctionScope().findVariableValueAllScopes(parserRuleContext.getText());

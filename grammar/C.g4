@@ -110,6 +110,11 @@ referenceType
 	|	arrayType
 	;
 
+/*classOrInterfaceType
+	:	classType
+	|	interfaceType
+	;
+*/
 classOrInterfaceType
 	:	(	classType_lfno_classOrInterfaceType
 		|	interfaceType_lfno_classOrInterfaceType
@@ -429,6 +434,12 @@ unannReferenceType
 	|	unannTypeVariable
 	|	unannArrayType
 	;
+
+/*unannClassOrInterfaceType
+	:	unannClassType
+	|	unannInterfaceType
+	;
+*/
 
 unannClassOrInterfaceType
 	:	(	unannClassType_lfno_unannClassOrInterfaceType

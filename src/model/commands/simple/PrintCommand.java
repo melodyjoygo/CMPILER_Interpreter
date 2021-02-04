@@ -1,8 +1,8 @@
 package model.commands.simple;
 
 import model.OutputManager;
-import model.SymbolTableManager;
 import antlr.CParser;
+import model.SymbolTableManager;
 import model.commands.EvaluateCommand;
 import model.commands.ICommand;
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -25,25 +25,26 @@ public class PrintCommand implements ICommand, ParseTreeListener {
 
     @Override
     public void execute() {
-       ParseTreeWalker treeWalker = new ParseTreeWalker();
-       treeWalker.walk(this, this.functionCallerContext);
-       EvaluateCommand evaluateCommand = new EvaluateCommand(expressionContext);
-       evaluateCommand.execute();
-       this.evaluatedExpression = (String) evaluateCommand.evaluateExpression();
-       System.out.println("Executing Print Command in function: " + SymbolTableManager.getInstance().getCurrentFunction().getFunctionName());
-       evaluatedExpression = evaluatedExpression.replace(".", "");
-       evaluatedExpression = evaluatedExpression.replace("0", "");
-        OutputManager.getInstance().addoutputLog(this.evaluatedExpression);
+
+        ParseTreeWalker treeWalker = new ParseTreeWalker();
+        treeWalker.walk(this, this.functionCallerContext);
+        EvaluateCommand evaluateCommand = new EvaluateCommand(expressionContext);
+        evaluateCommand.execute();
+        this.evaluatedExpression = (String) evaluateCommand.evaluateExpression();
+        System.out.println("Executing Print Command in function: " + SymbolTableManager.getInstance().getCurrentFunction().getFunctionName());
+        evaluatedExpression = evaluatedExpression.replace(".", "");
+        evaluatedExpression = evaluatedExpression.replace("0", "");
+        OutputManager.getInstance().addoutputLog(evaluatedExpression);
     }
 
     @Override
     public void visitTerminal(TerminalNode terminalNode) {
-        //comment
+
     }
 
     @Override
     public void visitErrorNode(ErrorNode errorNode) {
-        //comment
+
     }
 
     @Override
@@ -55,6 +56,6 @@ public class PrintCommand implements ICommand, ParseTreeListener {
 
     @Override
     public void exitEveryRule(ParserRuleContext parserRuleContext) {
-        //comment
+
     }
 }

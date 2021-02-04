@@ -31,12 +31,16 @@ public class IfCommand implements IConditionalCommand, IControlledCommand {
             bool = true;
         }
 
+        //System.out.println("Executing Commands inside of if - " + bool);
+
         if(bool){
+            //System.out.println("positive");
             for (ICommand command: positiveCommands) {
                 command.execute();
             }
         }
         else{
+            //System.out.println("negative");
             for (ICommand command: negativeCommands) {
                 command.execute();
             }
